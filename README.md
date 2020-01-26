@@ -1,3 +1,72 @@
+# Test-project
+
+## Getting started
+### Environment Files
+This package ships with a .env.example file in the root of the project.
+
+You must rename this file to just .env
+
+### Run commands
+1. Run `composer install`
+2. Run `npm i`
+
+### Create Database
+You must create your database on your server and on your .env file update the following lines:
+```bash
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=homestead
+DB_USERNAME=homestead
+DB_PASSWORD=secret
+```
+Change these lines to reflect your new database settings.
+
+### Artisan Commands
+The first thing we are going to so is set the key that Laravel will use when doing encryption.
+```bash
+php artisan key:generate
+```
+You should see a green message stating your key was successfully generated. As well as you should see the APP_KEY variable in your .env file reflected.
+
+It's time to see if your database credentials are correct.
+
+We are going to run the built in migrations to create the database tables:
+```bash
+php artisan migrate
+```
+You should see a message for each table migrated, if you don't and see errors, than your credentials are most likely not correct.
+
+We are now going to set the administrator account information. To do this you need to navigate to this file and change the name/email/password of the Administrator account.
+
+You can delete the other dummy users, but do not delete the administrator account or you will not be able to access the backend.
+
+Now seed the database with:
+```bash
+php artisan db:seed
+```
+You should get a message for each file seeded, you should see the information in your database tables.
+
+### Storage:link
+After your project is installed you must run this command to link your public storage folder for user avatar uploads:
+```bash
+php artisan storage:link
+```
+
+### Login
+After your project is installed and you can access it in a browser, click the login button on the right of the navigation bar.
+
+The administrator credentials are:
+
+**Username:** admin@admin.com  
+**Password:** secret
+
+You will be automatically redirected to the backend. If you changed these values in the seeder prior, then obviously use the ones you updated to.
+
+
+.
+.
+.
 ## Laravel Boilerplate (Current: Laravel 6.*) ([Demo](http://134.209.123.206/))
 
 [![Latest Stable Version](https://poser.pugx.org/rappasoft/laravel-boilerplate/v/stable)](https://packagist.org/packages/rappasoft/laravel-boilerplate)
