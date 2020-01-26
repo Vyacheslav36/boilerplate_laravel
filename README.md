@@ -53,6 +53,13 @@ After your project is installed you must run this command to link your public st
 php artisan storage:link
 ```
 
+### Run server
+```bash
+php artisan serve --port=8080
+or
+php artisan serve --host=laravel.app --port=8080
+```
+
 ### Login
 After your project is installed and you can access it in a browser, click the login button on the right of the navigation bar.
 
