@@ -56,8 +56,6 @@ php artisan storage:link
 ### Run server
 ```bash
 php artisan serve --port=8080
-or
-php artisan serve --host=laravel.app --port=8080
 ```
 
 ### Login

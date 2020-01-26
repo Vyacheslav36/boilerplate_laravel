@@ -165,6 +165,9 @@ return [
                     'name' => 'Название',
                     'sort' => 'Позиция',
                 ],
+                'types' => [
+                    'name' => 'Название типа',
+                ],
                 'users' => [
                     'active' => 'Активный',
                     'associated_roles' => 'Роли',
